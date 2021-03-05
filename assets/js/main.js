@@ -19,11 +19,14 @@ console.log(cognomi);
 // chiedo il cognome aqll'utente
 var cognome = prompt("Dammi il tuo cognome con la prima lettera maiuscola:");
 
+// trasformo la prima lettera in maiuscolo
+var cognome1 = cognome.charAt(0).toUpperCase() + cognome.slice(1);
+
 // controllo
-console.log(cognome);
+console.log(cognome1);
 
 // aggiungo il cognome dell'utente alla lista
-cognomi.push(cognome);
+cognomi.push(cognome1);
 
 // controllo
 console.log(cognomi);
@@ -41,10 +44,11 @@ for (var i = 0; i < cognomi.length; i++) {
   document.getElementById("list").innerHTML = lista;
 }
 
+console.log(lista);
 
 // con un'iterazione cerco il cognome inserito nella lista facendola fermare quando lo trova
 for (var i = 0; i < cognomi.length; i++) {
-  if (cognome == cognomi[i]) {
+  if (cognome1 == cognomi[i]) {
     break;
   }
 }
